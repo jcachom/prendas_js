@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="estilos/estilos.css" />
     <link rel="stylesheet" href="estilos/estiloSas.css" />
 
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -100,7 +102,7 @@
                   <th></th>
                   <th></th>
                   <th></th>
-                  <th>SubTotales</th>
+                  <th></th>
                   <th></th>
                 </tr>
               </thead>
@@ -109,15 +111,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
+                  <td> <label for="subtotal">SubTotal($)</label></td>
                   <td>
-                    <label for="subtotal">SubTotal($)</label>
-                    <input
-                      type="text"
-                      id="txt_subtotal"
-                      value="0"
-                      class="form-control col-12"
-                      disabled
+                   
+                    <input type="text" id="txt_subtotal" value="0" class="form-control col-12" disabled
                     />
                   </td>
                   <td></td>
@@ -127,15 +124,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
+                  <td> <label for="subtotal">Impuesto($)</label> </td>
                   <td>
-                    <label for="subtotal">Impuesto($)</label>
-                    <input
-                      type="text"
-                      id="txt_impuesto"
-                      value="0"
-                      class="form-control col-12"
-                      disabled
+                   
+                    <input type="text" id="txt_impuesto" value="0" class="form-control col-12" disabled
                     />
                   </td>
                   <td></td>
@@ -145,41 +137,50 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
+                  <td><label for="subtotal">Total($)</label> </td>
                   <td>
-                    <label for="subtotal">Total($)</label>
-                    <input
-                      type="text"
-                      id="txt_total"
-                      value="0"
-                      class="form-control col-12"
-                      disabled
-                    />
+                    
+                    <input type="text" id="txt_total" value="0" class="form-control col-12" disabled/>
                   </td>
                   <td></td>
                 </tr>
+
+
+
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td style="text-align: right;">
+                    <button
+                    type="button"
+                    class="btn btn-danger btn-block"
+                    id="btn_confirmar"
+                  >
+                  Confirmar Pedido
+                  </button>
+
+                  </td>
+                  <td></td>
+                </tr>
+
+
+
               </tbody>
             </table>
           </div>
 
-          <div class="text-center">
-            <input
-              type="submit"
-              value="Confirmar Pedido"
-              class="btnConfirmar"
-            />
-          </div>
+     
+ 
         </div>
       </form>
     </div>
 
+    
+
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"

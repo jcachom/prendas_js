@@ -1,338 +1,25 @@
-﻿/*
-class Producto {
-  constructor(
-    sku,
-    nombre,
-    moneda,
-    precio,
-    nombre_img,
-    tipo,
-    detalle,
-    cant_pedido,
-    linea_pedido
-  ) {
-    this.sku = sku;
-    this.nombre = nombre;
-    this.moneda = moneda;
-    this.precio = precio;
-    this.nombre_img = nombre_img;
-    this.tipo = tipo;
-    this.detalle = detalle;
-    this.cant_pedido = cant_pedido;
-    this.linea_pedido = linea_pedido;
-  }
-}
+﻿let lProductosS1 = [];
 
-const lProductosS1 = [];
-//const lProductosS2 = [];
+CargarPrendas() ;
 
-//const lProductos = [];
-
-lProductosS1.push(
-  new Producto(
-    "007",
-    "Gabardina",
-    "$",
-    40,
-    "producto_7.png",
-    "Gabardina de lana de gran oferta para hombre abrigo de invierno cálido de Color liso prendas d YUA",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "008",
-    "Chompa",
-    "$",
-    50,
-    "producto_8.png",
-    "Chompa Hombre Newport Fz Greg I20-Verde",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "009",
-    "Abrigo",
-    "$",
-    60,
-    "producto_9.png",
-    "Abrigo Hombre Christian Lacroix Jkt Detanv W20-Negro",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "010",
-    "Abrigo",
-    "$",
-    70,
-    "producto_10.png",
-    "Abrigo Hombre Basement Jkt Tednv W20-Negro",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "011",
-    "Abrigo",
-    "$",
-    80,
-    "producto_11.png",
-    "Abrigo de lana corto para hombre abrigo de lana cálido para hombre de mediana edad chaquetas g MIS",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "012",
-    "ZOGAA",
-    "$",
-    40,
-    "producto_12.png",
-    "ZOGAA, chaquetas y abrigos largos de Otoño Invierno, chaquetas de me =",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "013",
-    "Abrigo",
-    "$",
-    50,
-    "producto_13.png",
-    "abrigo con cuello de soporte para hombre traje ajustado Chaqueta con botones abrigo blazer Top YUA",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "014",
-    "Abrigo",
-    "$",
-    60,
-    "producto_14.png",
-    "Abrigo Hombre Christian Lacroix Jkt Detach W20-Marrón",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "015",
-    "Abrigo",
-    "$",
-    70,
-    "producto_15.png",
-    "abrigo de mezcla de lana de invierno para hombre abrigos de lana para el trabajo de alta calid HON",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "016",
-    "Abrigo",
-    "$",
-    80,
-    "producto_16.png",
-    "Abrigo de lana a la moda para hombre gabardina larga de Color sólido cálido para invierno abri YUA",
-    0,
-    0
-  )
-);
-
-// inicio dos
-
-lProductosS1.push(
-  new Producto(
-    "017",
-    "Abrigo",
-    "$",
-    90,
-    "producto_17.png",
-    "Abrigo largo grueso con cremallera para hombre abrigos de lana de doble cuello de Color sólido YUA",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "018",
-    "Laamei",
-    "$",
-    100,
-    "producto_18.png",
-    "Laamei de otoño abrigo de lana de invierno para hombre abrigo de lana para hombre abrigo largo HON",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "019",
-    "Abrigo",
-    "$",
-    105,
-    "producto_19.png",
-    "Abrigo de lana cálido genuino para hombre abrigo Casual de otoño invierno a cuadros con cuello SAI",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "020",
-    "Abrigo",
-    "$",
-    110,
-    "producto_20.png",
-    "abrigos de mezcla de lana de invierno para hombre gabardina informal Simple de marca de moda p YUA",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "021",
-    "Chaqueta",
-    "$",
-    120,
-    "producto_21.png",
-    "Chaqueta de lana de 100% de doble cara para hombre chaqueta con bolsillos grandes con cuello v HON",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "022",
-    "Abrigo",
-    "$",
-    100,
-    "producto_22.png",
-    "abrigos de mezcla de lana de invierno para hombre gabardina informal Simple de marca de moda p MIS",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "023",
-    "Abrigo",
-    "$",
-    120,
-    "producto_23.png",
-    "Nuevo alta calidad abrigo de lana suelta gran casuales de los hombres X-Giro largo Collar de d MIS",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "024",
-    "Chaquetas",
-    "$",
-    130,
-    "producto_24.png",
-    "invierno otoño gruesas chaquetas de lana Abrigos Hombre moda Casual Slim Fit Casual chaquetas SAI",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "025",
-    "Abrigo",
-    "$",
-    140,
-    "producto_25.png",
-    "Abrigo Casual de lana de doble botonadura para hombre 4XL estilo militar Peacoat hombre Cachem YUA",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "026",
-    "Abrigo",
-    "$",
-    70,
-    "producto_26.png",
-    "nuevo abrigo de lana de alta calidad para otoño e invierno abrigo largo cortaviento de color s SAI",
-    0,
-    0
-  )
-);
-lProductosS1.push(
-  new Producto(
-    "027",
-    "Abrigo",
-    "$",
-    80,
-    "producto_27.png",
-    "hombres abrigos de la primavera de marca de moda Collar Chaqueta slim para hombre delgado de t YUA",
-    0,
-    0
-  )
-);
-*/
-
-let lProductosS1 = [];
-
-CargarProductos();
-
-function CargarProductos() {
+function CargarPrendas(){
   const urlJson = "prendas.json";
-  
-
-fetch("prendas.json")
-  .then(response => response.json())
-  .then(json => console.log(json));
-
- 
-
-
- 
- $.ajax({
-            method: "POST",
-            crossDomain: true,
-            dataType: 'jsonp',
-
-
-           body: JSON.stringify(data),
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-                "Accept": 'application/json',
-            }  ;
-
-
-            url:  "https://api.apis.net.pe/v1/tipo-cambio-sunat",         
-            success: function(respuesta){
-                console.log(respuesta);
-            }
-        });
-
-
-
-
-
   $.getJSON(urlJson, function (respuesta, estado) {
 
-     console.log( "JSON Data: " + respuesta );
+    console.log( "JSON Data: " + respuesta );
 
-    if (estado === "success") {
-      lProductosS1 = respuesta;
-    }
-  });
+   if (estado === "success") {
+     lProductosS1 = respuesta;
+     CargarProductos();
+   }
+ });
+
+
+}
+
+
+function CargarProductos() {
+  
 
   let html1 = "";
   let html2 = "";
@@ -450,15 +137,19 @@ fetch("prendas.json")
   document.getElementById("divSeccion2").innerHTML = html2;
 
   //localStorage.clear();
+
+    var classBtn = document.getElementsByClassName("classbtn_det");
+    let i = 0;
+  for (i = 0; i < classBtn.length; i++) {
+      classBtn[i].addEventListener("click", mostrarDetalleClick);
+    }
+  document.getElementById("divPrevisualizacion").style.display = "none";
+
+  VisualizarCantidProductoCarrito();
+
 }
 
-var classBtn = document.getElementsByClassName("classbtn_det");
-let i = 0;
-for (i = 0; i < classBtn.length; i++) {
-  classBtn[i].addEventListener("click", mostrarDetalleClick);
-}
 
-document.getElementById("divPrevisualizacion").style.display = "none";
 function mostrarDetalleClick() {
   document.getElementById("divPrevisualizacion").style.display = "block";
 
@@ -482,11 +173,10 @@ function mostrarDetalleClick() {
 
   window.scrollTo(0, hdivHeader + hnavHeader + hcarousel);
 
-  // document.getElementById("sesionUsuario").value;
-  // alert("hizo click:" + arrbtnId);
+ 
 }
 
-VisualizarCantidProductoCarrito();
+//VisualizarCantidProductoCarrito();
 
 document.getElementById("btn_solicitar").addEventListener("click", function () {
   let listproductoCarritoJson = localStorage.getItem("listProdCarrito");

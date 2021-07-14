@@ -35,7 +35,7 @@ $(".classtxt_cantidad").change(function () {
   let subTotal = parseFloat(precio) * parseFloat(qpedido);
   $("#txt_subTotal_" + sku).val(subTotal);
   actualizarItemCarritoStorage(sku, qpedido, "ADICIONAR");
-  //alert("id seleccionado :" + precio);
+   
 });
 
 function actualizarItemCarritoStorage(sku, qpedido, accion) {
@@ -73,11 +73,16 @@ function ActualizarSubTotales() {
   let listCarritoArray = [];
   listCarritoArray = JSON.parse(listproductoCarritoJson);
   let SubTotalImporte = 0;
-  listCarritoArray.forEach((item) => {
-    SubTotalImporte =
-      SubTotalImporte + parseFloat(item.cant_pedido) * parseFloat(item.precio);
-  });
-  //let impuesto = SubTotalImporte * 0.18;
+  if (listCarritoArray !=null) {
+
+    listCarritoArray.forEach((item) => {
+      SubTotalImporte =
+        SubTotalImporte + parseFloat(item.cant_pedido) * parseFloat(item.precio);
+    });
+
+  }
+
+
   let impuesto = parseFloat(
     Math.round(SubTotalImporte * 0.18 * 100) / 100
   ).toFixed(2);
@@ -94,7 +99,7 @@ function ListarCarrito() {
 
   let listproductoCarritoJson = localStorage.getItem("listProdCarrito");
   let listCarritoArray = [];
-  //let totProductos = 0;
+ 
   if (listproductoCarritoJson != null) {
     listCarritoArray = JSON.parse(listproductoCarritoJson);
 
@@ -104,7 +109,7 @@ function ListarCarrito() {
     let txtSubTotal = "";
     let hdInput = "";
     for (let item of listCarritoArray) {
-      //  totProductos = totProductos + parseInt(producto.cant_pedido, 10);
+    
 
       botonEliminar =
         "<button type='button' id='btn_eliminar_" +
@@ -144,7 +149,7 @@ function ListarCarrito() {
         item.nombre +
         "</td>" +
         "<td>" +
-        //item.cant_pedido +
+     
         inputCant +
         "</td>" +
         "<td>" +
@@ -152,7 +157,7 @@ function ListarCarrito() {
         hdInput +
         "</td>" +
         "<td>" +
-        //item.precio * item.cant_pedido +
+         
         txtSubTotal +
         "</td>" +
         "<td>" +
@@ -162,6 +167,38 @@ function ListarCarrito() {
     }
 
     $("#tb_listCarritoBody").html(html);
-    ActualizarSubTotales();
+  
   }
+  ActualizarSubTotales();
 }
+
+
+ 
+$(document).on("click", "#btn_confirmar", function (event) {
+ 
+  Swal.fire({
+    title: "Confirmar compra.",
+    text: "Está seguro de la compra?",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Aceptar"
+  }).then(function (result) {
+    if (result.value) {
+      
+ 
+      localStorage.clear();
+      ListarCarrito();
+
+      Swal.fire(
+        "El comprobante ha sido enviado a su correo."          
+      ); 
+
+    }
+  });
+});
+
+
+  
+
+ 
